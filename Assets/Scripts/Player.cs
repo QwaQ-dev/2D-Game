@@ -6,9 +6,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-    [SerializeField]
-    private float force;
-    
+
+
+    public static Player instance;
 
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
@@ -19,7 +19,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        if (instance == null)
+            instance = this;
     }
 
     
@@ -35,10 +36,7 @@ public class Player : MonoBehaviour
         direction.y = rb.velocity.y;
         rb.velocity = direction;
 
-        if (groundDetection.isGrounded)
-        {
-            rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
-        }
+
 
         if (direction.x > 0)
         {
