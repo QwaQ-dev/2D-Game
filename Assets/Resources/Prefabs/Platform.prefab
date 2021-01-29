@@ -177,6 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce059ca16b22d9468473a1a0f2968b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
+  force: 8
   groundDetection: {fileID: 2047801726}
   rb: {fileID: 2047801725}
