@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Aid
+  - Coin
   layers:
   - Default
   - TransparentFX
